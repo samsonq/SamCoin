@@ -1,1 +1,1 @@
-# blockchain
+# SamCoin
