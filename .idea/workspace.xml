@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6eb47775-d603-4d70-8339-13f9e377e6df" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Block.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Blockchain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SHA256.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tx.java" afterDir="false" />
-    </list>
+    <list default="true" id="6eb47775-d603-4d70-8339-13f9e377e6df" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,11 +13,11 @@
     <session id="1388902733">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.3" value="3" />
+          <entry key="project.open.time.3" value="4" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -52,21 +47,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Block.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="4" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
+            <state relative-caret-position="390">
+              <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
               <folding>
-                <element signature="e#436#437#0" expanded="true" />
-                <element signature="e#462#463#0" expanded="true" />
-                <element signature="e#508#509#0" expanded="true" />
-                <element signature="e#536#537#0" expanded="true" />
-                <element signature="e#499#500#0" expanded="true" />
-                <element signature="e#520#521#0" expanded="true" />
-                <element signature="e#646#647#0" expanded="true" />
-                <element signature="e#688#689#0" expanded="true" />
                 <element signature="e#734#735#0" expanded="true" />
-                <element signature="e#755#756#0" expanded="true" />
+                <element signature="e#770#771#0" expanded="true" />
                 <element signature="e#822#823#0" expanded="true" />
-                <element signature="e#839#840#0" expanded="true" />
+                <element signature="e#862#863#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -123,8 +110,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -141,7 +127,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -178,9 +165,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="112" y="67" width="1340" height="932" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2650231" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26887518" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -229,31 +215,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Block.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
+          <folding>
+            <element signature="e#734#735#0" expanded="true" />
+            <element signature="e#770#771#0" expanded="true" />
+            <element signature="e#822#823#0" expanded="true" />
+            <element signature="e#862#863#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Blockchain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Block.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="4" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
-          <folding>
-            <element signature="e#436#437#0" expanded="true" />
-            <element signature="e#462#463#0" expanded="true" />
-            <element signature="e#508#509#0" expanded="true" />
-            <element signature="e#536#537#0" expanded="true" />
-            <element signature="e#499#500#0" expanded="true" />
-            <element signature="e#520#521#0" expanded="true" />
-            <element signature="e#646#647#0" expanded="true" />
-            <element signature="e#688#689#0" expanded="true" />
-            <element signature="e#734#735#0" expanded="true" />
-            <element signature="e#755#756#0" expanded="true" />
-            <element signature="e#822#823#0" expanded="true" />
-            <element signature="e#839#840#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
