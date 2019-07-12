@@ -29,11 +29,27 @@ public class Block {
         this.timeStamp = timeStamp;
     }
 
+    public String getHash() {
+        return this.hash;
+    }
+
+    public void setHash(String hash) {
+        this.hash = hash;
+    }
+
     public String getPrevHash() {
         return this.prevHash;
     }
     
     public void setPrevHash(String prevHash) {
         this.prevHash = prevHash;
+    }
+
+    public String getNonce() {
+        return this.nonce;
+    }
+
+    public void setNonce(String nonce) {
+        this.nonce = nonce;
     }
 }
