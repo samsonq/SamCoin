@@ -1,13 +1,13 @@
 import java.util.*;
 
-public class Block {
+public class Block<T> {
 
-    //private List<T> transactions = new LinkedList<>();
+    private List<T> transactions = new LinkedList<>();
     private int index; //block index
     private long timeStamp; //time in epoch (seconds since 1 Jan 1970)
     private String hash; //hash of this block
     private String prevHash; //hash of previous block
-    private String nonce; //value that needs to be mined
+    private String nonce = "0000"; //value that needs to be mined
 
     public void computeHash() {
 
