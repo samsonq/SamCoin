@@ -7,13 +7,19 @@ public class Blockchain<T> {
 
     public Blockchain() {
         Block genesis = new Block();
-        genesis.setHash("root");
+        //genesis.setHash("root");
         this.chain.add(genesis);
+    }
+
+    public void printBlocks() {
+        for (int i = 0; i < this.chain.size(); i++) {
+            System.out.println(this.chain.get(i));
+        }
     }
 
     public Block createBlock() {
         Block newBlock = new Block();
-        newBlock.setTimeStamp(System.currentTimeMillis());
+        //newBlock.setTimeStamp(System.currentTimeMillis());
         newBlock.setIndex(this.chain.size());
         String prevHash = lastBlock().getHash();
         newBlock.setPrevHash(prevHash);

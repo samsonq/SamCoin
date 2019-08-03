@@ -66,4 +66,8 @@ public class Block<T> {
     public void setNonce(String nonce) {
         this.nonce = nonce;
     }
+
+    public String toString() {
+        return "";
+    }
 }
