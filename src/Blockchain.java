@@ -35,4 +35,13 @@ public class Blockchain<T> {
     private Block lastBlock() {
         return this.chain.get(this.chain.size()-1);
     }
+
+    public String proofOfWork(Block<T> block) {
+        String nonce = block.getNonce();
+        long temp = 0;
+        boolean found = false;
+        String hash = "";
+
+        return "";
+    }
 }

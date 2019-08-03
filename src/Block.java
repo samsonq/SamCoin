@@ -1,16 +1,29 @@
 import java.util.*;
+import java.sql.Timestamp;
 
 public class Block<T> {
 
     private List<T> transactions = new LinkedList<>();
     private int index; //block index
-    private long timeStamp; //time in epoch (seconds since 1 Jan 1970)
+    private Timestamp timeStamp; //time in epoch (seconds since 1 Jan 1970)
     private String hash; //hash of this block
     private String prevHash; //hash of previous block
-    private String nonce = "0000"; //value that needs to be mined
+    private String nonce; //value that needs to be mined
+
+    public Block() {
+        this.nonce = "0000";
+        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+        this.timeStamp = timestamp;
+        generateHash();
+    }
+
+    public void printBlock() {
+        System.out.println("Timestamp: " + this.timeStamp);
+        System.out.println("Transactions: " + this.transactions);
+        System.out.println("Current Hash: " + this.hash);
+    }
 
     public void computeHash() {
-
     }
 
     public int getIndex() {
@@ -21,11 +34,11 @@ public class Block<T> {
         this.index = index;
     }
 
-    public long getTimeStamp() {
+    public Timestamp getTimeStamp() {
         return this.timeStamp;
     }
 
-    public void setTimeStamp(long timeStamp) {
+    public void setTimeStamp(Timestamp timeStamp) {
         this.timeStamp = timeStamp;
     }
 
@@ -33,8 +46,9 @@ public class Block<T> {
         return this.hash;
     }
 
-    public void setHash(String hash) {
-        this.hash = hash;
+    public void generateHash() {
+        String contents = this.timeStamp.toString() + this.transactions.toString() + this.nonce + this.prevHash;
+        this.hash = SHA256.generateHash(contents);
     }
 
     public String getPrevHash() {
