@@ -1,9 +1,9 @@
 import java.util.*;
 
-public class Blockchain<T> {
+public class Blockchain {
 
     private static final int BLOCK_SIZE = 10;
-    private List<Block<T>> chain = new ArrayList<>();
+    private List<Block> chain = new ArrayList<>();
 
     public Blockchain() {
         Block genesis = new Block();
@@ -26,8 +26,8 @@ public class Blockchain<T> {
         return newBlock;
     }
 
-    public void addBlock(Block<T> block) {
-        Block<T> curr = block;
+    public void addBlock(Block block) {
+        Block curr = block;
         /*
         for (int i = this.chain.size()-1; i >= 0; i--) {
             if (this.chain.get(i).getHash().equals(curr.getHash())) {
@@ -59,7 +59,7 @@ public class Blockchain<T> {
         return true;
     }
 
-    public String proofOfWork(Block<T> block) {
+    public String proofOfWork(Block block) {
         String nonce = block.getNonce();
         long temp = 0;
         boolean found = false;

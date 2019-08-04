@@ -1,9 +1,9 @@
 import java.util.*;
 import java.sql.Timestamp;
 
-public class Block<T> {
+public class Block {
 
-    private List<T> transactions = new LinkedList<>();
+    private List<Transaction> transactions = new LinkedList<>();
     private int index; //block index
     private Timestamp timeStamp; //time in epoch (seconds since 1 Jan 1970)
     private String hash; //hash of this block
@@ -12,8 +12,8 @@ public class Block<T> {
 
     public Block() {
         this.nonce = "0000";
-        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-        this.timeStamp = timestamp;
+        Timestamp time = new Timestamp(System.currentTimeMillis());
+        this.timeStamp = time;
         this.hash = generateHash();
     }
 
@@ -26,6 +26,10 @@ public class Block<T> {
         return SHA256.generateHash(contents);
     }
     //public void computeHash() {}
+
+    public void addTransaction(Transaction transaction) {
+        this.transactions.add(transaction);
+    }
 
     public int getIndex() {
         return this.index;
