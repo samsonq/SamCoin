@@ -14,17 +14,18 @@ public class Block<T> {
         this.nonce = "0000";
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         this.timeStamp = timestamp;
-        generateHash();
+        this.hash = generateHash();
     }
 
-    public void printBlock() {
-        System.out.println("Timestamp: " + this.timeStamp);
-        System.out.println("Transactions: " + this.transactions);
-        System.out.println("Current Hash: " + this.hash);
+    public String getHash() {
+        return this.hash;
     }
 
-    public void computeHash() {
+    public String generateHash() {
+        String contents = this.timeStamp.toString() + this.transactions.toString() + this.nonce + this.prevHash;
+        return SHA256.generateHash(contents);
     }
+    //public void computeHash() {}
 
     public int getIndex() {
         return this.index;
@@ -40,15 +41,6 @@ public class Block<T> {
 
     public void setTimeStamp(Timestamp timeStamp) {
         this.timeStamp = timeStamp;
-    }
-
-    public String getHash() {
-        return this.hash;
-    }
-
-    public void generateHash() {
-        String contents = this.timeStamp.toString() + this.transactions.toString() + this.nonce + this.prevHash;
-        this.hash = SHA256.generateHash(contents);
     }
 
     public String getPrevHash() {
@@ -68,6 +60,6 @@ public class Block<T> {
     }
 
     public String toString() {
-        return "";
+        return "Timestamp: " + this.timeStamp + " Transactions: " + this.transactions + " Current Hash: " + this.hash;
     }
 }

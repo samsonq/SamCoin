@@ -28,6 +28,7 @@ public class Blockchain<T> {
 
     public void addBlock(Block<T> block) {
         Block<T> curr = block;
+        /*
         for (int i = this.chain.size()-1; i >= 0; i--) {
             if (this.chain.get(i).getHash().equals(curr.getHash())) {
                 curr = this.chain.get(i);
@@ -35,11 +36,27 @@ public class Blockchain<T> {
                 throw new RuntimeException("Block Invalid!");
             }
         }
+        */
+        String proof = proofOfWork(block);
         this.chain.add(block);
     }
 
     private Block lastBlock() {
         return this.chain.get(this.chain.size()-1);
+    }
+
+    public boolean validateChain() {
+        for (int i = 1; i < this.chain.size(); i++) {
+            Block curr = this.chain.get(i);
+            Block prev = this.chain.get(i-1);
+            if (!curr.getHash().equals(curr.generateHash())) {
+                return false;
+            }
+            if (!curr.getPrevHash().equals(prev.generateHash())) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public String proofOfWork(Block<T> block) {
