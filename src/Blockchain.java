@@ -7,7 +7,6 @@ public class Blockchain {
 
     public Blockchain() {
         Block genesis = new Block();
-        //genesis.setHash("root");
         this.chain.add(genesis);
     }
 
@@ -19,7 +18,6 @@ public class Blockchain {
 
     public Block createBlock() {
         Block newBlock = new Block();
-        //newBlock.setTimeStamp(System.currentTimeMillis());
         newBlock.setIndex(this.chain.size());
         String prevHash = lastBlock().getHash();
         newBlock.setPrevHash(prevHash);
@@ -37,7 +35,6 @@ public class Blockchain {
             }
         }
         */
-        String proof = proofOfWork(block);
         this.chain.add(block);
     }
 
@@ -57,14 +54,5 @@ public class Blockchain {
             }
         }
         return true;
-    }
-
-    public String proofOfWork(Block block) {
-        String nonce = block.getNonce();
-        long temp = 0;
-        boolean found = false;
-        String hash = "";
-
-        return "";
     }
 }

@@ -22,10 +22,10 @@ public class Block {
     }
 
     public String generateHash() {
-        String contents = this.timeStamp.toString() + this.transactions.toString() + this.nonce + this.prevHash;
+        String contents = this.timeStamp.toString() + this.index +
+                          this.transactions.toString() + this.nonce + this.prevHash;
         return SHA256.generateHash(contents);
     }
-    //public void computeHash() {}
 
     public void addTransaction(Transaction transaction) {
         this.transactions.add(transaction);
