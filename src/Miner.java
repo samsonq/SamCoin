@@ -1,6 +1,6 @@
 public class Miner {
 
-    private String proofOfWork(Block block) {
+    public static String proofOfWork(Block block) {
         String key = block.getNonce();
         long nonce = 0;
         boolean found = false;

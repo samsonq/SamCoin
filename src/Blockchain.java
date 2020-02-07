@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Blockchain {
+public class Blockchain extends Miner {
 
     private static final int BLOCK_SIZE = 10;
     private List<Block> chain = new ArrayList<>();
@@ -24,18 +24,13 @@ public class Blockchain {
         return newBlock;
     }
 
-    public void addBlock(Block block) {
-        Block curr = block;
-        /*
-        for (int i = this.chain.size()-1; i >= 0; i--) {
-            if (this.chain.get(i).getHash().equals(curr.getHash())) {
-                curr = this.chain.get(i);
-            } else {
-                throw new RuntimeException("Block Invalid!");
-            }
-        }
-        */
+    public String addBlock(Block block) {
         this.chain.add(block);
+        if (!validateChain()) {
+            this.chain.remove(lastBlock());
+            throw new RuntimeException("Invalid Block!");
+        }
+        return Miner.proofOfWork(block);
     }
 
     private Block lastBlock() {

@@ -14,6 +14,17 @@ public class Block {
         this.nonce = "0000";
         Timestamp time = new Timestamp(System.currentTimeMillis());
         this.timeStamp = time;
+        this.transactions = new ArrayList<Transaction>();
+        this.prevHash = "0000";
+        this.hash = generateHash();
+    }
+
+    public Block(List<Transaction> transactions, String prevHash) {
+        this.nonce = "0000";
+        Timestamp time = new Timestamp(System.currentTimeMillis());
+        this.timeStamp = time;
+        this.transactions = transactions;
+        this.prevHash = prevHash;
         this.hash = generateHash();
     }
 
