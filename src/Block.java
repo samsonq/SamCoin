@@ -1,6 +1,13 @@
 import java.util.*;
 import java.sql.Timestamp;
 
+/**
+ * A single block within the blockchain containing transaction data, timestamp,
+ * and hash of the previous block. Contains methods to generate a new hash and
+ * append to the chain.
+ *
+ * @author Samson Qian
+ */
 public class Block {
 
     private List<Transaction> transactions = new LinkedList<>();

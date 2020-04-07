@@ -1,7 +1,7 @@
 import java.util.*;
 import java.sql.Timestamp;
 
-public class Transaction {
+public class Transaction implements Tx {
 
     private Client sender;
     private Client recipient;
@@ -13,6 +13,10 @@ public class Transaction {
         this.recipient = recipient;
         this.value = value;
         this.time = new Timestamp(System.currentTimeMillis());
+    }
+
+    public String hash() {
+        return "";
     }
 
     public Client getSender() {
